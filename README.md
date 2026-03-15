@@ -8,20 +8,33 @@ The project implements several classical machine learning models to classify new
 
 ## Dataset
 
-The dataset used in this project is a **public fake news dataset** containing news articles labeled as either **real** or **fake**.
+The dataset used in this project is the **LIAR2 dataset**, which is publicly available online: https://github.com/chengxuphd/liar2
 
-Each entry in the dataset includes:
+Each entry in the dataset contains several attributes, including:
 
-- The **title** of the article  
-- The **text content** of the article  
-- A **label** indicating whether the news is real or fake  
+- **statement** – the textual claim or statement
+- **speaker** – the person who made the statement
+- **context** – the context in which the statement was made
+- **label** – the truthfulness label assigned to the statement
 
-The dataset is composed of two main files:
+The dataset includes several truthfulness categories such as:
 
-- `True.csv` – real news articles  
-- `Fake.csv` – fake news articles  
+- `true`
+- `mostly-true`
+- `half-true`
+- `barely-true`
+- `false`
+- `pants-fire`
 
-The articles come from different news sources and cover various political and social topics. The objective of the classifier is to **learn textual patterns that distinguish legitimate journalism from fabricated or misleading news content**.
+For the purposes of this project, these labels are used to train machine learning models capable of distinguishing between **reliable and unreliable statements**.
+
+The dataset is organized into three main files:
+
+- `train.tsv` – training dataset
+- `valid.tsv` – validation dataset
+- `test.tsv` – testing dataset
+
+These files allow us to train and evaluate the models in a structured way.
 
 ---
 
